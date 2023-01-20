@@ -9,12 +9,13 @@ jobs:
   KeepAlive:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup python3
-        uses: actions/setup-python@v3
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
-          cache: 'pip'
-          
+          python-version: 3.9
+
       - name: Setup Github CLI
         # You may pin to the exact commit or the version.
         # uses: Monorepo-Actions/setup-gh-cli@8b4bea5196708d4678ca9ccdc678012095a81180
