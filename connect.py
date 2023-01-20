@@ -1,6 +1,6 @@
 
-import os
+import subprocess
 
-for line in os.popen('gh cs list').read().splitlines():
+for line in subprocess.getoutput('gh cs list').splitlines():
     line=line.split("\t")[0]
-    print(line+os.popen("gh cs ssh -c "+ line +" \"echo ok && exit\"").read())
+    print(line + subprocess.getoutput('gh cs ssh -c '+ line +' \"echo ok && exit\"'))
