@@ -1,3 +1,5 @@
+# Abandoned since github provided "keep" to keep codespaces from being deleted.
+
 # codespace-keepalive
 Keep codespace from being deleted.
 
